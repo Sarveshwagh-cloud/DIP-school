@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@theme {
+  --color-meadow: #2FA36B;
+  --color-meadow-light: #E7F6EE;
+  --color-meadow-dark: #1E7A4E;
+  --color-sky: #3B9AE1;
+  --color-sky-light: #E4F2FB;
+  --color-sun: #FFC53D;
+  --color-sun-light: #FFF4D6;
+  --color-sun-ink: #C99400;
+  --color-blossom: #FF6F91;
+  --color-blossom-light: #FFE7EC;
+  --color-blossom-ink: #B23A5B;
+  --color-ink: #22343A;
+  --color-cream: #FFFDF7;
+
+  --font-display: var(--font-fredoka), system-ui, sans-serif;
+  --font-body: var(--font-nunito), system-ui, sans-serif;
+}
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { background: var(--color-cream); color: var(--color-ink); font-family: var(--font-body); }
+  h1, h2, h3, h4 { font-family: var(--font-display); }
+}
+
+.blob { border-radius: 42% 58% 62% 38% / 45% 42% 58% 55%; }
+.blob2 { border-radius: 58% 42% 38% 62% / 55% 55% 45% 45%; }
+.eyebrow { letter-spacing: .14em; text-transform: uppercase; font-weight: 700; font-size: .72rem; }
+
+.float-slow { animation: floaty 7s ease-in-out infinite; }
+.float-med  { animation: floaty 5s ease-in-out infinite; }
+.float-fast { animation: floaty 3.6s ease-in-out infinite; }
+@keyframes floaty { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-14px); } }
+
+.reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1); }
+.reveal.in { opacity: 1; transform: none; }
+
+.link-underline { background-image: linear-gradient(var(--color-sun), var(--color-sun)); background-size: 0% 3px; background-position: 0 100%; background-repeat: no-repeat; transition: background-size .3s; }
+.link-underline:hover { background-size: 100% 3px; }
+
+.fld { width: 100%; border: 2px solid rgba(34,52,58,.12); border-radius: 14px; padding: .7rem 1rem; font-family: inherit; font-size: 1rem; color: var(--color-ink); background: #fff; transition: border-color .2s; }
+.fld:focus { outline: none; border-color: var(--color-meadow); }
+.lbl { display: block; font-weight: 700; font-size: .85rem; color: var(--color-ink); margin-bottom: .35rem; }
+
+a:focus-visible, button:focus-visible { outline: 3px solid var(--color-sky); outline-offset: 3px; border-radius: 6px; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1 !important; transform: none !important; transition: none; }
+  .float-slow, .float-med, .float-fast, .animate-ping { animation: none !important; }
+}
