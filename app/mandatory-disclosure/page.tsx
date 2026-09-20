@@ -3,88 +3,95 @@ import PageHero from "@/components/PageHero";
 
 export const metadata: Metadata = {
   title: "Mandatory Public Disclosure | DIPS Umred",
-  description:
-    "Mandatory Public Disclosure of Deoraoji Itankar Public School, Umred — school information, infrastructure and statutory documents published as required under the CBSE Affiliation Bye-Laws.",
+  description: "Mandatory Public Disclosure of Deoraoji Itankar Public School, Umred.",
 };
 
-const GENERAL: { label: string; value: string }[] = [
-  { label: "Name of the school", value: "Deoraoji Itankar Public School, Umred" },
-  { label: "Managed by (society/trust)", value: "Uday Mahila Seva Sanstha" },
-  { label: "CBSE affiliation number", value: "1130888" },
-  { label: "CBSE school code", value: "30867" },
-  { label: "UDISE code", value: "27091119434" },
-  {
-    label: "Complete address with pin code",
-    value:
-      "Near Hirwa Talaw, Budhwari Peth, Umred, Tah. Umred, Dist. Nagpur, Maharashtra — 441203",
-  },
-  { label: "Principal's name", value: "Pallavi Shekhar Wankhede" },
-  { label: "School email", value: "dips.umred@gmail.com" },
-  { label: "Contact number", value: "98227 27300" },
-  { label: "Year of establishment", value: "2014" },
-  { label: "Classes offered", value: "Nursery to Std 10" },
+const GENERAL = [
+  ["Name of the school", "Deoraoji Itankar Public School, Umred"],
+  ["Managed by (society/trust)", "Uday Mahila Seva Sanstha"],
+  ["CBSE affiliation number", "1130888"],
+  ["CBSE school code", "30867"],
+  ["UDISE code", "27091119434"],
+  ["Complete address with pin code", "Near Hirwa Talaw, Budhwari Peth, Umred, Tah. Umred, Dist. Nagpur, Maharashtra - 441203"],
+  ["Principal's name", "Pallavi Shekhar Wankhede"],
+  ["School email", "dips.umred@gmail.com"],
+  ["Contact number", "98227 27300"],
+  ["Year of establishment", "2014"],
+  ["Classes offered", "Nursery to Std 10"],
 ];
 
-const INFRA: { label: string; value: string }[] = [
-  { label: "Total campus / land area (sq. metres)", value: "17,400" },
-  { label: "Total built-up area (sq. metres)", value: "3,852" },
-  { label: "Number of classrooms", value: "26" },
-  { label: "Size of each classroom (sq. metres)", value: "Approx. 50 to 61" },
-  { label: "Number of laboratories (incl. computer labs)", value: "4 (Science, Maths, and two Computer labs)" },
-  { label: "Size of each laboratory (sq. metres)", value: "Approx. 61" },
-  { label: "Internet facility", value: "Yes" },
-  { label: "Number of girls' toilets", value: "4" },
-  { label: "Number of boys' toilets", value: "4" },
+const INFRA = [
+  ["Total campus / land area (sq. metres)", "17,400"],
+  ["Total built-up area (sq. metres)", "3,852"],
+  ["Number of classrooms", "26"],
+  ["Size of each classroom (sq. metres)", "Approx. 50 to 61"],
+  ["Number of laboratories (incl. computer labs)", "4 (Science, Maths, and two Computer labs)"],
+  ["Size of each laboratory (sq. metres)", "Approx. 61"],
+  ["Internet facility", "Yes"],
+  ["Number of girls toilets", "4"],
+  ["Number of boys toilets", "4"],
 ];
 
-const DOCS: { label: string; file: string }[] = [
-  { label: "Affiliation letter (up to Secondary, valid to 31.03.2027)", file: "affiliation-letter.pdf" },
-  { label: "Recognition / Self-Financed Scheme permission", file: "recognition-certificate.pdf" },
-  { label: "Society / trust registration certificate", file: "society-registration.pdf" },
-  { label: "Trust — list of members", file: "trust-members.pdf" },
-  { label: "No Objection Certificate (NOC)", file: "noc.pdf" },
-  { label: "Certificate of land", file: "certificate-of-land.pdf" },
-  { label: "Building safety certificate", file: "building-safety-certificate.pdf" },
-  { label: "Built-up area certificate", file: "built-up-area-certificate.pdf" },
-  { label: "Fire safety certificate", file: "fire-safety-certificate.pdf" },
-  { label: "Self-certification", file: "self-certification.pdf" },
-  { label: "Water, health & sanitation certificate", file: "water-health-sanitation-certificate.pdf" },
-  { label: "Fee structure (2026-27)", file: "fee-structure.pdf" },
-  { label: "Annual academic calendar (2026-27)", file: "academic-calendar.pdf" },
-  { label: "School Management Committee (SMC) — members", file: "smc-members.pdf" },
-  { label: "Board results — last three years (Class X)", file: "board-results.pdf" },
+const DOCS = [
+  ["Affiliation letter (up to Secondary, valid to 31.03.2027)", "affiliation-letter.pdf"],
+  ["Recognition / Self-Financed Scheme permission", "recognition-certificate.pdf"],
+  ["Society / trust registration certificate", "society-registration.pdf"],
+  ["Trust - list of members", "trust-members.pdf"],
+  ["No Objection Certificate (NOC)", "noc.pdf"],
+  ["Certificate of land", "certificate-of-land.pdf"],
+  ["Building safety certificate", "building-safety-certificate.pdf"],
+  ["Built-up area certificate", "built-up-area-certificate.pdf"],
+  ["Fire safety certificate", "fire-safety-certificate.pdf"],
+  ["Self-certification", "self-certification.pdf"],
+  ["Water, health and sanitation certificate", "water-health-sanitation-certificate.pdf"],
+  ["Fee structure (2026-27)", "fee-structure.pdf"],
+  ["Annual academic calendar (2026-27)", "academic-calendar.pdf"],
+  ["School Management Committee (SMC) - members", "smc-members.pdf"],
+  ["Board results - last three years (Class X)", "board-results.pdf"],
 ];
 
-function Heading({ title }: { title: string }) {
+function Rows({ data }: { data: string[][] }) {
   return (
-    <h2 className="font-display font-semibold text-2xl md:text-3xl text-ink text-center mb-8">{title}</h2>
-  );
-}
-
-function InfoCard({ rows }: { rows: { label: string; value: string }[] }) {
-  return (
-    <div className="reveal bg-white rounded-3xl p-6 md:p-8 border-2 border-meadow/10 max-w-3xl mx-auto">
-      {rows.map((row) => (
-        <div
-          key={row.label}
-          className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 py-3.5 border-b border-meadow/10 last:border-0"
-        >
-          <span className="font-bold text-ink text-[15px]">{row.label}</span>
-          <span className="text-ink/70 sm:text-right">{row.value}</span>
+    <div className="bg-white rounded-3xl p-6 border-2 border-meadow/10 max-w-3xl mx-auto">
+      {data.map((row) => (
+        <div key={row[0]} className="flex flex-col sm:flex-row sm:justify-between gap-1 py-3 border-b border-meadow/10 last:border-0">
+          <span className="font-bold text-ink text-[15px]">{row[0]}</span>
+          <span className="text-ink/70 sm:text-right">{row[1]}</span>
         </div>
       ))}
     </div>
   );
 }
 
-function DocLink({ label, file }: { label: string; file: string }) {
+export default function MandatoryDisclosurePage() {
   return (
-      <a
-      href={`/disclosure/${file}`}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="group flex items-center gap-4 bg-white border-2 border-meadow/10 rounded-2xl p-4 hover:border-meadow/40 hover:shadow-sm transition"
-    >
-      <span className="shrink-0 grid place-items-center w-11 h-11 rounded-xl bg-blossom-light text-blossom-ink">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M14 2H6a2 2 0 0
+    <>
+      <PageHero eyebrow="Transparency" title="Mandatory Public Disclosure" subtitle="Published as required under the CBSE Affiliation Bye-Laws." />
+
+      <section className="max-w-6xl mx-auto px-5 py-16">
+        <h2 className="font-display font-semibold text-2xl text-ink text-center mb-8">School information</h2>
+        <Rows data={GENERAL} />
+      </section>
+
+      <section className="bg-meadow-light">
+        <div className="max-w-6xl mx-auto px-5 py-16">
+          <h2 className="font-display font-semibold text-2xl text-ink text-center mb-8">School infrastructure</h2>
+          <Rows data={INFRA} />
+        </div>
+      </section>
+
+      <section className="max-w-4xl mx-auto px-5 py-16">
+        <h2 className="font-display font-semibold text-2xl text-ink text-center mb-8">Documents</h2>
+        <div className="grid sm:grid-cols-2 gap-4 max-w-4xl mx-auto">
+          {DOCS.map((doc) => (
+            <a key={doc[1]} href={"/disclosure/" + doc[1]} target="_blank" rel="noopener noreferrer" className="flex items-center justify-between gap-3 bg-white border-2 border-meadow/10 rounded-2xl p-4 hover:border-meadow/40 transition">
+              <span className="font-semibold text-ink text-[15px]">{doc[0]}</span>
+              <span className="shrink-0 text-meadow font-bold text-sm">View</span>
+            </a>
+          ))}
+        </div>
+        <p className="text-center text-sm text-ink/50 mt-6">Each document opens as a PDF in a new tab.</p>
+      </section>
+    </>
+  );
+}
