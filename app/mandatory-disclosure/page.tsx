@@ -37,10 +37,6 @@ const INFRA: { label: string; value: string }[] = [
   { label: "Number of boys' toilets", value: "4" },
 ];
 
-/* All documents shown on the page.
- * Each file lives in the  public/disclosure  folder,
- * named EXACTLY as the "file" value below (all lowercase). */
-
 const DOCS: { label: string; file: string }[] = [
   { label: "Affiliation letter (up to Secondary, valid to 31.03.2027)", file: "affiliation-letter.pdf" },
   { label: "Recognition / Self-Financed Scheme permission", file: "recognition-certificate.pdf" },
@@ -91,51 +87,4 @@ function DocLink({ label, file }: { label: string; file: string }) {
     >
       <span className="shrink-0 grid place-items-center w-11 h-11 rounded-xl bg-blossom-light text-blossom-ink">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-          <path d="M14 2v6h6" />
-        </svg>
-      </span>
-      <span className="flex-1 font-semibold text-ink text-[15px] leading-snug">{label}</span>
-      <span className="shrink-0 text-meadow font-bold text-sm flex items-center gap-1">
-        View
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="group-hover:translate-x-0.5 transition-transform">
-          <path d="M5 12h14M13 6l6 6-6 6" />
-        </svg>
-      </span>
-    </a>
-  );
-}
-
-export default function MandatoryDisclosurePage() {
-  return (
-    <>
-      <PageHero
-        eyebrow="Transparency"
-        title="Mandatory Public Disclosure"
-        subtitle="Published as required under the CBSE Affiliation Bye-Laws."
-      />
-
-      <section className="max-w-6xl mx-auto px-5 py-16">
-        <Heading title="School information" />
-        <InfoCard rows={GENERAL} />
-      </section>
-
-      <section className="bg-meadow-light">
-        <div className="max-w-6xl mx-auto px-5 py-16">
-          <Heading title="School infrastructure" />
-          <InfoCard rows={INFRA} />
-        </div>
-      </section>
-
-      <section className="max-w-4xl mx-auto px-5 py-16">
-        <Heading title="Documents" />
-        <div className="reveal grid sm:grid-cols-2 gap-4">
-          {DOCS.map((d) => (
-            <DocLink key={d.file} label={d.label} file={d.file} />
-          ))}
-        </div>
-        <p className="text-center text-sm text-ink/50 mt-6">Each document opens as a PDF in a new tab.</p>
-      </section>
-    </>
-  );
-}
+          <path d="M14 2H6a2 2 0 0
