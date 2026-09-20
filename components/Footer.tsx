@@ -30,6 +30,7 @@ export default function Footer() {
             <li><Link href="/academics" className="hover:text-sun transition">Academics</Link></li>
             <li><Link href="/admissions" className="hover:text-sun transition">Admissions</Link></li>
             <li><Link href="/gallery" className="hover:text-sun transition">Gallery</Link></li>
+            <li><Link href="/mandatory-disclosure" className="hover:text-sun transition">Mandatory Disclosure</Link></li>
           </ul>
         </div>
         <div>
