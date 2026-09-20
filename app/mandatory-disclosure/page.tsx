@@ -79,7 +79,7 @@ function InfoCard({ rows }: { rows: { label: string; value: string }[] }) {
 
 function DocLink({ label, file }: { label: string; file: string }) {
   return (
-    
+      <a
       href={`/disclosure/${file}`}
       target="_blank"
       rel="noopener noreferrer"
