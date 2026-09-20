@@ -33,21 +33,21 @@ const INFRA = [
 ];
 
 const DOCS = [
-  ["Affiliation letter (up to Secondary, valid to 31.03.2027)", "Affiliation_Letter.pdf"],
-  ["Recognition / Self-Financed Scheme permission", "Government_Permission_for_running_classes_1_to_12.pdf"],
-  ["Society / trust registration certificate", "Trust_Certificate.pdf"],
-  ["Trust - list of members", "LIST_TRUST_MEMBERS.pdf"],
-  ["No Objection Certificate (NOC)", "NOC.pdf"],
-  ["Certificate of land", "CERTIFICATE_of_LAND.pdf"],
-  ["Building safety certificate", "BUILDING_SAFETY_CERTIFICATE.pdf"],
-  ["Built-up area certificate", "BuiltupCertificate.pdf"],
-  ["Fire safety certificate", "Fire_Safety_Certificate.pdf"],
-  ["Self-certification", "Self_Certification.pdf"],
-  ["Water, health and sanitation certificate", "Safe_Drinking_Water_and_Sanitary_Condition_Certificate_i.pdf"],
-  ["Fee structure (2026-27)", "Fees_Stucture.pdf"],
-  ["Annual academic calendar (2026-27)", "ANNUAL_CALENDAR_2026-27_Academic_Session.pdf"],
-  ["School Management Committee (SMC) - members", "School_Management_Committee__SMC_.pdf"],
-  ["Board results - last three years (Class X)", "School_Result.pdf"],
+  ["Affiliation letter (up to Secondary, valid to 31.03.2027)", "affiliation-letter.pdf"],
+  ["Recognition / Self-Financed Scheme permission", "recognition-certificate.pdf"],
+  ["Society / trust registration certificate", "society-registration.pdf"],
+  ["Trust - list of members", "trust-members.pdf"],
+  ["No Objection Certificate (NOC)", "noc.pdf"],
+  ["Certificate of land", "certificate-of-land.pdf"],
+  ["Building safety certificate", "building-safety-certificate.pdf"],
+  ["Built-up area certificate", "built-up-area-certificate.pdf"],
+  ["Fire safety certificate", "fire-safety-certificate.pdf"],
+  ["Self-certification", "self-certification.pdf"],
+  ["Water, health and sanitation certificate", "water-health-sanitation-certificate.pdf"],
+  ["Fee structure (2026-27)", "fee-structure.pdf"],
+  ["Annual academic calendar (2026-27)", "academic-calendar.pdf"],
+  ["School Management Committee (SMC) - members", "smc-members.pdf"],
+  ["Board results - last three years (Class X)", "board-results.pdf"],
 ];
 
 function Rows({ data }: { data: string[][] }) {
