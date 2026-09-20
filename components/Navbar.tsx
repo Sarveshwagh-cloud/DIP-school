@@ -10,6 +10,7 @@ const links = [
   { href: "/academics", label: "Academics" },
   { href: "/admissions", label: "Admissions" },
   { href: "/gallery", label: "Gallery" },
+  { href: "/mandatory-disclosure", label: "Mandatory Disclosure" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -60,7 +61,7 @@ export default function Navbar() {
             </span>
           </Link>
 
-          <div className="hidden lg:flex items-center gap-7 font-semibold text-[15px] text-ink/80">
+          <div className="hidden xl:flex items-center gap-6 font-semibold text-[15px] text-ink/80">
             {links.map((l) => (
               <Link key={l.href} href={l.href} className="link-underline hover:text-meadow">{l.label}</Link>
             ))}
@@ -71,14 +72,14 @@ export default function Navbar() {
               Admissions open
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
             </Link>
-            <button onClick={() => setOpen((v) => !v)} aria-label="Toggle menu" aria-expanded={open} className="lg:hidden grid place-items-center w-11 h-11 rounded-xl bg-meadow/10 text-meadow">
+            <button onClick={() => setOpen((v) => !v)} aria-label="Toggle menu" aria-expanded={open} className="xl:hidden grid place-items-center w-11 h-11 rounded-xl bg-meadow/10 text-meadow">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round"><path d="M4 7h16M4 12h16M4 17h16" /></svg>
             </button>
           </div>
         </div>
 
         {open && (
-          <div className="lg:hidden border-t border-meadow/10 bg-cream px-5 py-3 space-y-1 font-semibold text-ink/80">
+          <div className="xl:hidden border-t border-meadow/10 bg-cream px-5 py-3 space-y-1 font-semibold text-ink/80">
             {links.map((l) => (
               <Link key={l.href} href={l.href} onClick={() => setOpen(false)} className="block py-2">{l.label}</Link>
             ))}
