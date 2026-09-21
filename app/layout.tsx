@@ -20,7 +20,7 @@ const nunito = Nunito({
 export const metadata: Metadata = {
   title: "Deoraoji Itankar Public School, Umred | CBSE School",
   description:
-    "DIPS Umred is a CBSE school nurturing children from preschool through Std 10 in the green heart of Umred. Admissions open — enquire today.",
+    "DIPS Umred is a CBSE school nurturing children from Std 1 through Std 10 in the green heart of Umred. Admissions open — enquire today.",
   icons: {
     icon: "/logo.png",
     shortcut: "/logo.png",

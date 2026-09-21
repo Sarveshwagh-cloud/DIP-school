@@ -17,7 +17,7 @@ const GENERAL = [
   ["School email", "dips.umred@gmail.com"],
   ["Contact number", "98227 27300"],
   ["Year of establishment", "2014"],
-  ["Classes offered", "Nursery to Std 10"],
+  ["Classes offered", "Std 1 to Std 10"],
 ];
 
 const INFRA = [

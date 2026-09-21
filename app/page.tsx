@@ -55,7 +55,7 @@ export default function Home() {
               <span className="text-sky"> &amp; learn.</span>
             </h1>
             <p className="mt-6 text-lg text-ink/70 max-w-xl leading-relaxed">
-              Deoraoji Itankar Public School nurtures every child from preschool through Std&nbsp;10 — with caring teachers, smart classrooms, and plenty of room to play, in the green heart of Umred.
+              Deoraoji Itankar Public School nurtures every child from Std&nbsp;1 through Std&nbsp;10 — with caring teachers, smart classrooms, and plenty of room to play, in the green heart of Umred.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a href="#enquiry" className="inline-flex items-center gap-2 bg-meadow text-white font-bold text-lg px-7 py-3.5 rounded-full hover:bg-meadow-dark transition shadow-lg shadow-meadow/25">
@@ -71,7 +71,7 @@ export default function Home() {
               <div className="w-px bg-ink/10 hidden sm:block" />
               <div><div className="font-display font-semibold text-2xl text-ink">1000+</div><div className="text-sm text-ink/55 font-semibold">Happy students</div></div>
               <div className="w-px bg-ink/10 hidden sm:block" />
-              <div><div className="font-display font-semibold text-2xl text-ink">Std 1–10</div><div className="text-sm text-ink/55 font-semibold">+ Preschool</div></div>
+              <div><div className="font-display font-semibold text-2xl text-ink">Std 1–10</div><div className="text-sm text-ink/55 font-semibold">CBSE curriculum</div></div>
             </div>
           </div>
 
@@ -95,7 +95,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-5 py-14 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           <div className="reveal"><div className="font-display font-semibold text-4xl md:text-5xl text-meadow"><CountUp target={10} suffix="+" /></div><div className="mt-1 font-semibold text-ink/70">Years of joyful learning</div></div>
           <div className="reveal"><div className="font-display font-semibold text-4xl md:text-5xl text-sky"><CountUp target={1000} suffix="+" /></div><div className="mt-1 font-semibold text-ink/70">Happy students</div></div>
-          <div className="reveal"><div className="font-display font-semibold text-4xl md:text-5xl text-blossom"><CountUp target={13} /></div><div className="mt-1 font-semibold text-ink/70">Grades, Nursery to 10</div></div>
+          <div className="reveal"><div className="font-display font-semibold text-4xl md:text-5xl text-blossom"><CountUp target={10} /></div><div className="mt-1 font-semibold text-ink/70">Grades, Std 1 to 10</div></div>
           <div className="reveal"><div className="font-display font-semibold text-4xl md:text-5xl text-sun-ink"><CountUp target={20} suffix="+" /></div><div className="mt-1 font-semibold text-ink/70">Activities, sports &amp; clubs</div></div>
         </div>
       </section>
@@ -141,11 +141,10 @@ export default function Home() {
         <div className="bg-meadow-light">
           <div className="max-w-6xl mx-auto px-5 py-20">
             <div className="text-center max-w-2xl mx-auto mb-14 reveal">
-              <p className="eyebrow text-meadow mb-3">From tiny tots to teens</p>
+              <p className="eyebrow text-meadow mb-3">From foundation to future</p>
               <h2 className="font-semibold text-ink leading-tight" style={{ fontSize: "clamp(1.9rem,4vw,2.6rem)" }}>Academics that grow with your child</h2>
             </div>
-            <div className="grid md:grid-cols-3 gap-7">
-              <div className="reveal bg-white rounded-3xl p-8 border-b-4 border-blossom hover:-translate-y-1.5 transition shadow-sm"><div className="w-16 h-16 grid place-items-center rounded-2xl bg-blossom-light text-4xl mb-5">🧸</div><span className="eyebrow text-blossom-ink">Kids Pyramid</span><h3 className="font-semibold text-2xl text-ink mt-1 mb-3">Preschool &amp; Nursery</h3><p className="text-ink/70 leading-relaxed">Play-way learning in natural surroundings, puppet theatre, and classrooms designed just for little ones taking their very first steps.</p></div>
+            <div className="grid md:grid-cols-2 gap-7">
               <div className="reveal bg-white rounded-3xl p-8 border-b-4 border-sun hover:-translate-y-1.5 transition shadow-sm"><div className="w-16 h-16 grid place-items-center rounded-2xl bg-sun-light text-4xl mb-5">✏️</div><span className="eyebrow text-sun-ink">Primary</span><h3 className="font-semibold text-2xl text-ink mt-1 mb-3">Std 1 to 5</h3><p className="text-ink/70 leading-relaxed">Strong foundations in reading, numbers and curiosity — built the joyful way, with activity-led lessons and lots of encouragement.</p></div>
               <div className="reveal bg-white rounded-3xl p-8 border-b-4 border-sky hover:-translate-y-1.5 transition shadow-sm"><div className="w-16 h-16 grid place-items-center rounded-2xl bg-sky-light text-4xl mb-5">🔬</div><span className="eyebrow text-sky">Secondary</span><h3 className="font-semibold text-2xl text-ink mt-1 mb-3">Std 6 to 10</h3><p className="text-ink/70 leading-relaxed">CBSE academics powered by smart classes and well-equipped labs — nurturing confident, capable, well-rounded young people.</p></div>
             </div>
@@ -194,8 +193,8 @@ export default function Home() {
             </div>
           </div>
           <div className="grid md:grid-cols-3 gap-7">
-            <article className="reveal bg-white rounded-3xl overflow-hidden shadow-sm hover:-translate-y-1 transition"><div className="h-44 bg-blossom-light grid place-items-center text-6xl">🧸</div><div className="p-6"><span className="inline-block bg-blossom-light text-blossom-ink text-xs font-bold px-3 py-1 rounded-full mb-3">Preschool</span><h3 className="font-semibold text-lg text-ink mb-2 leading-snug">Kids Pyramid preschool is now open</h3><p className="text-ink/65 text-sm leading-relaxed">A joyful new early-years wing with play-way learning, puppet theatre and classrooms built just for little ones.</p></div></article>
-            <article className="reveal bg-white rounded-3xl overflow-hidden shadow-sm hover:-translate-y-1 transition"><div className="h-44 bg-sun-light grid place-items-center text-6xl">📝</div><div className="p-6"><span className="inline-block bg-sun-light text-sun-ink text-xs font-bold px-3 py-1 rounded-full mb-3">Admissions</span><h3 className="font-semibold text-lg text-ink mb-2 leading-snug">Nursery admissions open for 2026–27</h3><p className="text-ink/65 text-sm leading-relaxed">Seats are filling up for our youngest learners. Enquire today to book a campus visit and meet our teachers.</p></div></article>
+            <article className="reveal bg-white rounded-3xl overflow-hidden shadow-sm hover:-translate-y-1 transition"><div className="h-44 bg-meadow-light grid place-items-center text-6xl">🏫</div><div className="p-6"><span className="inline-block bg-meadow-light text-meadow text-xs font-bold px-3 py-1 rounded-full mb-3">Academics</span><h3 className="font-semibold text-lg text-ink mb-2 leading-snug">CBSE academics — Std 1 to 10</h3><p className="text-ink/65 text-sm leading-relaxed">Smart classrooms, well-equipped labs and activity-led learning that builds strong foundations for every student.</p></div></article>
+            <article className="reveal bg-white rounded-3xl overflow-hidden shadow-sm hover:-translate-y-1 transition"><div className="h-44 bg-sun-light grid place-items-center text-6xl">📝</div><div className="p-6"><span className="inline-block bg-sun-light text-sun-ink text-xs font-bold px-3 py-1 rounded-full mb-3">Admissions</span><h3 className="font-semibold text-lg text-ink mb-2 leading-snug">Admissions open for 2026–27</h3><p className="text-ink/65 text-sm leading-relaxed">Seats are filling up across all grades. Enquire today to book a campus visit and meet our teachers.</p></div></article>
             <article className="reveal bg-white rounded-3xl overflow-hidden shadow-sm hover:-translate-y-1 transition"><div className="h-44 bg-sky-light grid place-items-center text-6xl">🎶</div><div className="p-6"><span className="inline-block bg-sky-light text-sky text-xs font-bold px-3 py-1 rounded-full mb-3">Campus life</span><h3 className="font-semibold text-lg text-ink mb-2 leading-snug">Music, yoga &amp; science in full swing</h3><p className="text-ink/65 text-sm leading-relaxed">From morning meditation to hands-on science projects, there&apos;s always something happening at DIPS.</p></div></article>
           </div>
         </div>
@@ -231,7 +230,7 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-7">
             <figure className="reveal bg-white rounded-3xl p-7 shadow-sm"><div className="font-display text-blossom text-5xl leading-none mb-2">&ldquo;</div><blockquote className="text-ink/75 leading-relaxed">My daughter runs into school every morning. The teachers are so warm, and I&apos;ve watched her grow in confidence month after month.</blockquote><figcaption className="mt-5 flex items-center gap-3"><span className="grid place-items-center w-11 h-11 rounded-full bg-meadow text-white font-display font-semibold">P</span><span><span className="block font-semibold text-ink">Parent of a Std 2 student</span><span className="block text-sm text-ink/50">DIPS Umred</span></span></figcaption></figure>
             <figure className="reveal bg-white rounded-3xl p-7 shadow-sm"><div className="font-display text-sky text-5xl leading-none mb-2">&ldquo;</div><blockquote className="text-ink/75 leading-relaxed">The smart classes and activities keep my son genuinely excited about learning. Safety and communication are excellent too.</blockquote><figcaption className="mt-5 flex items-center gap-3"><span className="grid place-items-center w-11 h-11 rounded-full bg-sky text-white font-display font-semibold">R</span><span><span className="block font-semibold text-ink">Parent of a Std 6 student</span><span className="block text-sm text-ink/50">DIPS Umred</span></span></figcaption></figure>
-            <figure className="reveal bg-white rounded-3xl p-7 shadow-sm"><div className="font-display text-sun-ink text-5xl leading-none mb-2">&ldquo;</div><blockquote className="text-ink/75 leading-relaxed">We chose DIPS for the caring, family feel — and it has more than lived up to it. It really does feel like a garden where children bloom.</blockquote><figcaption className="mt-5 flex items-center gap-3"><span className="grid place-items-center w-11 h-11 rounded-full bg-blossom text-white font-display font-semibold">S</span><span><span className="block font-semibold text-ink">Parent of a Nursery student</span><span className="block text-sm text-ink/50">DIPS Umred</span></span></figcaption></figure>
+            <figure className="reveal bg-white rounded-3xl p-7 shadow-sm"><div className="font-display text-sun-ink text-5xl leading-none mb-2">&ldquo;</div><blockquote className="text-ink/75 leading-relaxed">We chose DIPS for the caring, family feel — and it has more than lived up to it. It really does feel like a garden where children bloom.</blockquote><figcaption className="mt-5 flex items-center gap-3"><span className="grid place-items-center w-11 h-11 rounded-full bg-blossom text-white font-display font-semibold">S</span><span><span className="block font-semibold text-ink">Parent of a Std 1 student</span><span className="block text-sm text-ink/50">DIPS Umred</span></span></figcaption></figure>
           </div>
           <p className="text-center text-ink/45 text-sm mt-8">Sample testimonials — to be replaced with real parent quotes.</p>
         </div>
@@ -282,7 +281,7 @@ export default function Home() {
           <div className="absolute -left-10 -bottom-10 w-48 h-48 bg-white/10 blob" />
           <div className="absolute -right-8 -top-12 w-40 h-40 bg-sun/25 blob2" />
           <div className="relative">
-            <span className="inline-flex items-center gap-2 bg-sun text-ink font-bold text-sm px-4 py-1.5 rounded-full mb-5">🎉 Now open · Nursery to Std 10</span>
+            <span className="inline-flex items-center gap-2 bg-sun text-ink font-bold text-sm px-4 py-1.5 rounded-full mb-5">🎉 Now open · Std 1 to Std 10</span>
             <h2 className="font-semibold leading-tight mb-4" style={{ fontSize: "clamp(1.9rem,4.5vw,3rem)" }}>Admissions are open. Let&apos;s help your child bloom.</h2>
             <p className="text-white/85 text-lg max-w-2xl mx-auto mb-8">Come visit our green campus in the heart of Umred, meet our caring teachers, and see the joyful DIPS difference for yourself.</p>
             <div className="flex flex-wrap gap-3 justify-center">

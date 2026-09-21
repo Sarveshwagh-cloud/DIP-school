@@ -4,7 +4,7 @@ import EnquiryForm from "@/components/EnquiryForm";
 
 export const metadata: Metadata = {
   title: "Admissions | DIPS Umred",
-  description: "Admissions are open at DIPS Umred for 2026–27, from Nursery to Std 10. See our simple admission process and send an enquiry.",
+  description: "Admissions are open at DIPS Umred for 2026–27, from Std 1 to Std 10. See our simple admission process and send an enquiry.",
 };
 
 const steps = [
@@ -20,7 +20,7 @@ export default function AdmissionsPage() {
       <PageHero
         eyebrow="Admissions"
         title="Admissions open for 2026–27"
-        subtitle="We're welcoming new children from Nursery right through to Std 10. Here's how to begin."
+        subtitle="We're welcoming new children from Std 1 right through to Std 10. Here's how to begin."
       />
 
       <section className="max-w-6xl mx-auto px-5 py-16">
@@ -28,7 +28,7 @@ export default function AdmissionsPage() {
           <div className="flex items-center gap-4">
             <span className="text-4xl">🎉</span>
             <div>
-              <div className="font-semibold text-xl text-ink">Now open · Nursery to Std 10</div>
+              <div className="font-semibold text-xl text-ink">Now open · Std 1 to Std 10</div>
               <div className="text-ink/70">Seats are filling up — enquire early to book a campus visit.</div>
             </div>
           </div>
