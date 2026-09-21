@@ -13,24 +13,10 @@ const GENERAL = [
   ["CBSE school code", "30867"],
   ["UDISE code", "27091119434"],
   ["Complete address with pin code", "Near Hirwa Talaw, Budhwari Peth, Umred, Tah. Umred, Dist. Nagpur, Maharashtra - 441203"],
-  ["Principal's name", "Pallavi Shekhar Wankhede"],
   ["School email", "dips.umred@gmail.com"],
-  ["Contact number", "98227 27300"],
-  ["Year of establishment", "2014"],
   ["Classes offered", "Std 1 to Std 10"],
 ];
 
-const INFRA = [
-  ["Total campus / land area (sq. metres)", "17,400"],
-  ["Total built-up area (sq. metres)", "3,852"],
-  ["Number of classrooms", "26"],
-  ["Size of each classroom (sq. metres)", "Approx. 50 to 61"],
-  ["Number of laboratories (incl. computer labs)", "4 (Science, Maths, and two Computer labs)"],
-  ["Size of each laboratory (sq. metres)", "Approx. 61"],
-  ["Internet facility", "Yes"],
-  ["Number of girls toilets", "4"],
-  ["Number of boys toilets", "4"],
-];
 
 const DOCS = [
   ["Affiliation letter (up to Secondary, valid to 31.03.2027)", "affiliation-letter.pdf"],
@@ -71,13 +57,6 @@ export default function MandatoryDisclosurePage() {
       <section className="max-w-6xl mx-auto px-5 py-16">
         <h2 className="font-display font-semibold text-2xl text-ink text-center mb-8">School information</h2>
         <Rows data={GENERAL} />
-      </section>
-
-      <section className="bg-meadow-light">
-        <div className="max-w-6xl mx-auto px-5 py-16">
-          <h2 className="font-display font-semibold text-2xl text-ink text-center mb-8">School infrastructure</h2>
-          <Rows data={INFRA} />
-        </div>
       </section>
 
       <section className="max-w-4xl mx-auto px-5 py-16">

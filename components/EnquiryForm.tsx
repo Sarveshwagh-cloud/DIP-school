@@ -4,7 +4,6 @@ import { useActionState } from "react";
 import { submitEnquiry, type FormState } from "@/app/actions";
 
 const grades = [
-  "Nursery", "Jr. KG", "Sr. KG",
   "Std 1", "Std 2", "Std 3", "Std 4", "Std 5",
   "Std 6", "Std 7", "Std 8", "Std 9", "Std 10",
 ];
