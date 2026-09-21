@@ -34,6 +34,7 @@ const DOCS = [
   ["Annual academic calendar (2026-27)", "academic-calendar.pdf"],
   ["School Management Committee (SMC) - members", "smc-members.pdf"],
   ["Board results - last three years (Class X)", "board-results.pdf"],
+   ["Parent Teacher Association For The Year 2026-2027", "parent_teacher_association.pdf"],
 ];
 
 function Rows({ data }: { data: string[][] }) {
