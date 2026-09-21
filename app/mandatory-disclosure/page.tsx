@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
+import DisclosureDocList from "@/components/DisclosureDocList";
 
 export const metadata: Metadata = {
   title: "Mandatory Public Disclosure | DIPS Umred",
@@ -18,7 +19,7 @@ const GENERAL = [
 ];
 
 
-const DOCS = [
+const DOCS: [string, string][] = [
   ["Affiliation letter (up to Secondary, valid to 31.03.2027)", "affiliation-letter.pdf"],
   ["Recognition / Self-Financed Scheme permission", "recognition-certificate.pdf"],
   ["Society / trust registration certificate", "society-registration.pdf"],
@@ -62,15 +63,7 @@ export default function MandatoryDisclosurePage() {
 
       <section className="max-w-4xl mx-auto px-5 py-16">
         <h2 className="font-display font-semibold text-2xl text-ink text-center mb-8">Documents</h2>
-        <div className="grid sm:grid-cols-2 gap-4 max-w-4xl mx-auto">
-          {DOCS.map((doc) => (
-            <a key={doc[1]} href={"/disclosure/" + doc[1]} target="_blank" rel="noopener noreferrer" className="flex items-center justify-between gap-3 bg-white border-2 border-meadow/10 rounded-2xl p-4 hover:border-meadow/40 transition">
-              <span className="font-semibold text-ink text-[15px]">{doc[0]}</span>
-              <span className="shrink-0 text-meadow font-bold text-sm">View</span>
-            </a>
-          ))}
-        </div>
-        <p className="text-center text-sm text-ink/50 mt-6">Each document opens as a PDF in a new tab.</p>
+        <DisclosureDocList documents={DOCS} />
       </section>
     </>
   );

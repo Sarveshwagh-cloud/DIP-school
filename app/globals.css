@@ -293,3 +293,11 @@ button:focus-visible {
     transform: none;
   }
 }
+
+/* ─── Security: Prevent Document Printing ─── */
+@media print {
+  body, html, iframe, dialog, [role="dialog"] {
+    display: none !important;
+    visibility: hidden !important;
+  }
+}
