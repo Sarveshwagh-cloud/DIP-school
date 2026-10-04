@@ -1,35 +1,57 @@
 import { NextResponse } from "next/server";
 import cloudinary from "@/lib/cloudinary";
 
-// Folder in Cloudinary where notice files are stored
 const NOTICES_FOLDER = "dips-notices";
+
+type CloudinaryResource = {
+  public_id: string;
+  secure_url: string;
+  created_at: string;
+  format: string;
+  bytes: number;
+};
 
 // Turn a public_id into a readable title.
 // Example: "dips-notices/diwali-holiday-notice-1738000000" -> "Diwali Holiday Notice"
 function titleFromPublicId(publicId: string): string {
   const parts = publicId.split("/");
   let name = parts[parts.length - 1];
-  // Remove the trailing "-<timestamp>" we add when uploading (6 or more digits)
   name = name.replace(/-\d{6,}$/, "");
   const spaced = name.replace(/[-_]+/g, " ").trim();
   return spaced.replace(/\b\w/g, (char) => char.toUpperCase());
 }
 
-// GET /api/notices  -> list all notices (public, no password needed to read)
+// GET /api/notices -> list all notices (public, no password needed to read)
 export async function GET() {
   try {
-    const result = await cloudinary.api.resources({
-      type: "upload",
-      prefix: NOTICES_FOLDER,
-      max_results: 500,
-    });
+    // Notices can be PDFs (raw) or images (png/jpg)
+    const [rawResult, imgResult] = await Promise.all([
+      cloudinary.api
+        .resources({
+          type: "upload",
+          resource_type: "raw",
+          prefix: NOTICES_FOLDER,
+          max_results: 500,
+        })
+        .catch(() => ({ resources: [] })),
+      cloudinary.api
+        .resources({
+          type: "upload",
+          resource_type: "image",
+          prefix: NOTICES_FOLDER,
+          max_results: 500,
+        })
+        .catch(() => ({ resources: [] })),
+    ]);
 
-    const notices = result.resources.map((r: { public_id: string; secure_url: string; created_at: string; format: string; bytes: number }) => ({
+    const all = [...(rawResult.resources || []), ...(imgResult.resources || [])];
+
+    const notices = all.map((r: CloudinaryResource) => ({
       public_id: r.public_id,
       url: r.secure_url,
       title: titleFromPublicId(r.public_id),
       created_at: r.created_at,
-      format: r.format,
+      format: r.format || (r.public_id.endsWith(".pdf") ? "pdf" : "file"),
       bytes: r.bytes,
     }));
 
@@ -45,7 +67,7 @@ export async function GET() {
   }
 }
 
-// POST /api/notices  -> sign an upload request (admin password required)
+// POST /api/notices -> sign an upload request (admin password required)
 export async function POST(request: Request) {
   try {
     const adminPassword = request.headers.get("x-admin-password");
@@ -66,7 +88,7 @@ export async function POST(request: Request) {
   }
 }
 
-// DELETE /api/notices  -> delete a notice by public_id (admin password required)
+// DELETE /api/notices -> delete a notice by public_id (admin password required)
 export async function DELETE(request: Request) {
   try {
     const adminPassword = request.headers.get("x-admin-password");
@@ -79,7 +101,17 @@ export async function DELETE(request: Request) {
       return NextResponse.json({ error: "Missing publicId" }, { status: 400 });
     }
 
-    const result = await cloudinary.uploader.destroy(publicId);
+    // Notice could be raw (PDF) or image
+    let result;
+    try {
+      result = await cloudinary.uploader.destroy(publicId, { resource_type: "raw" });
+      if (result.result !== "ok") {
+        result = await cloudinary.uploader.destroy(publicId, { resource_type: "image" });
+      }
+    } catch {
+      result = await cloudinary.uploader.destroy(publicId, { resource_type: "image" });
+    }
+
     return NextResponse.json({ result });
   } catch {
     return NextResponse.json({ error: "Failed to delete" }, { status: 500 });

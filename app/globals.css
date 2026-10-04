@@ -136,25 +136,27 @@
 /* ─── Floating Animation ─── */
 .float-slow {
   animation: floaty 7s ease-in-out infinite;
+  will-change: transform;
 }
 
 .float-med {
   animation: floaty 5s ease-in-out infinite;
+  will-change: transform;
 }
 
 .float-fast {
   animation: floaty 3.6s ease-in-out infinite;
+  will-change: transform;
 }
 
 @keyframes floaty {
-
   0%,
   100% {
     transform: translateY(0);
   }
 
   50% {
-    transform: translateY(-14px);
+    transform: translateY(-8px);
   }
 }
 

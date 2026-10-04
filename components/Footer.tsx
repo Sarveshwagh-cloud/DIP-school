@@ -30,6 +30,7 @@ export default function Footer() {
             <li><Link href="/academics" className="hover:text-sun transition">Academics</Link></li>
             <li><Link href="/admissions" className="hover:text-sun transition">Admissions</Link></li>
             <li><Link href="/gallery" className="hover:text-sun transition">Gallery</Link></li>
+            <li><Link href="/notices" className="hover:text-sun transition">Notice Board</Link></li>
             <li><Link href="/mandatory-disclosure" className="hover:text-sun transition">Mandatory Disclosure</Link></li>
           </ul>
         </div>
@@ -39,6 +40,10 @@ export default function Footer() {
             <li><Link href="/admissions#enquiry" className="hover:text-sun transition">Enquire now</Link></li>
             <li><Link href="/contact" className="hover:text-sun transition">Contact us</Link></li>
             <li><a href="tel:9822727300" className="hover:text-sun transition">Call the school</a></li>
+            <li><Link href="/admin" className="hover:text-sun text-white/50 transition flex items-center gap-1.5 pt-1">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
+              Staff Portal
+            </Link></li>
           </ul>
         </div>
         <div>

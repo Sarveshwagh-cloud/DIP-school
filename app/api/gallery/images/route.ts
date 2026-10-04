@@ -17,7 +17,15 @@ export async function GET(request: Request) {
   }
 
   try {
-    const images = await getGalleryImages();
+    const url = new URL(request.url);
+    const limitParam = url.searchParams.get("limit");
+    let images = await getGalleryImages();
+    if (limitParam) {
+      const limit = parseInt(limitParam, 10);
+      if (!isNaN(limit) && limit > 0) {
+        images = images.slice(0, limit);
+      }
+    }
     return NextResponse.json({ images });
   } catch (err) {
     console.error("Failed to fetch gallery images:", err);

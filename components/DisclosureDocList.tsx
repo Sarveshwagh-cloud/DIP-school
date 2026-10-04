@@ -1,7 +1,11 @@
 "use client";
 
 import React, { useState } from "react";
-import SecureDocumentModal from "./SecureDocumentModal";
+import dynamic from "next/dynamic";
+
+const SecureDocumentModal = dynamic(() => import("./SecureDocumentModal"), {
+  ssr: false,
+});
 
 interface DocumentItem {
   title: string;

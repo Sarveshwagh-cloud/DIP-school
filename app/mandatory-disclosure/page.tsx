@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
 import DisclosureDocList from "@/components/DisclosureDocList";
+import UploadedSchoolDocs from "@/components/UploadedSchoolDocs";
 
 export const metadata: Metadata = {
   title: "Mandatory Public Disclosure | DIPS Umred",
@@ -64,6 +65,7 @@ export default function MandatoryDisclosurePage() {
       <section className="max-w-4xl mx-auto px-5 py-16">
         <h2 className="font-display font-semibold text-2xl text-ink text-center mb-8">Documents</h2>
         <DisclosureDocList documents={DOCS} />
+        <UploadedSchoolDocs />
       </section>
     </>
   );

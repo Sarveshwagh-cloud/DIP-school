@@ -10,6 +10,7 @@ const links = [
   { href: "/academics", label: "Academics" },
   { href: "/admissions", label: "Admissions" },
   { href: "/gallery", label: "Gallery" },
+  { href: "/notices", label: "Notice Board" },
   { href: "/mandatory-disclosure", label: "Mandatory Disclosure" },
   { href: "/contact", label: "Contact" },
 ];
