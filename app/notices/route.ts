@@ -24,7 +24,7 @@ export async function GET() {
       max_results: 500,
     });
 
-    const notices = result.resources.map((r) => ({
+    const notices = result.resources.map((r: { public_id: string; secure_url: string; created_at: string; format: string; bytes: number }) => ({
       public_id: r.public_id,
       url: r.secure_url,
       title: titleFromPublicId(r.public_id),

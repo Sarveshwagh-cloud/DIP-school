@@ -1,6 +1,7 @@
 import Link from "next/link";
 import CountUp from "@/components/CountUp";
 import EnquiryForm from "@/components/EnquiryForm";
+import HomeGalleryPreview from "@/components/HomeGalleryPreview";
 
 const facilities = [
   { icon: "💻", bg: "bg-sky-light", title: "Smart digital classrooms", desc: "Audio-visual learning in every room." },
@@ -23,13 +24,7 @@ const pillars = [
   { icon: "🛡️", bg: "bg-blossom-light", title: "Safe & caring", desc: "A secure, CCTV-monitored campus where every child feels right at home." },
 ];
 
-const gallery = [
-  "https://www.dipsumred.org/wp-content/uploads/2022/06/DSC_7473.jpg",
-  "https://www.dipsumred.org/wp-content/uploads/2022/06/DSC_7435.jpg",
-  "https://www.dipsumred.org/wp-content/uploads/2022/06/DSC_7630.jpg",
-  "https://www.dipsumred.org/wp-content/uploads/2019/04/05-3.jpg",
-  "https://www.dipsumred.org/wp-content/uploads/2019/04/IMG-20190410-WA0055.jpg",
-];
+
 
 export default function Home() {
   return (
@@ -248,11 +243,7 @@ export default function Home() {
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
             </Link>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {gallery.map((src, i) => (
-              <div key={src} className={`rounded-3xl overflow-hidden aspect-square bg-meadow-light bg-cover bg-center ${i === 0 ? "col-span-2 row-span-2 md:col-span-1 md:row-span-1" : ""}`} style={{ backgroundImage: `url('${src}')` }} />
-            ))}
-          </div>
+          <HomeGalleryPreview />
         </div>
       </section>
 
