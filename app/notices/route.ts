@@ -34,7 +34,8 @@ export async function GET() {
     }));
 
     notices.sort(
-      (a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime()
+      (a: { created_at: string }, b: { created_at: string }) =>
+        new Date(b.created_at).getTime() - new Date(a.created_at).getTime()
     );
 
     return NextResponse.json({ notices });
