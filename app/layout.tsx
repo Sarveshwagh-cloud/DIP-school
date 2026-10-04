@@ -3,7 +3,6 @@ import { Fredoka, Nunito } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import FloatingEnquire from "@/components/FloatingEnquire";
 import ScrollReveal from "@/components/ScrollReveal";
 
 const fredoka = Fredoka({
@@ -39,7 +38,6 @@ export default function RootLayout({
         <Navbar />
         <main>{children}</main>
         <Footer />
-        <FloatingEnquire />
         <ScrollReveal />
       </body>
     </html>
