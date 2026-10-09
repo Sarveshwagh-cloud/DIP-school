@@ -15,7 +15,7 @@ export default function Footer() {
               height={48}
               className="h-11 w-auto object-contain shrink-0 bg-white/10 p-1 rounded-xl"
             />
-            <span className="font-display font-semibold text-white text-lg leading-tight">DIPS Umred</span>
+            <span className="font-display font-semibold text-white text-lg leading-tight">DEORAOJI ITANKAR PUBLIC SCHOOL</span>
           </div>
           <p className="text-sm leading-relaxed text-white/60">A CBSE school run by Uday Mahila Seva Sanstha, growing young minds in the green heart of Umred since 2014.</p>
           <div className="flex items-center gap-3 mt-5">

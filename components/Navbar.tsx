@@ -56,9 +56,9 @@ export default function Navbar() {
               className="h-12 w-auto object-contain shrink-0 group-hover:scale-105 transition-transform duration-200"
               priority
             />
-            <span className="leading-tight">
-              <span className="block font-display font-semibold text-ink text-lg">DIPS Umred</span>
-              <span className="block text-[11px] text-meadow font-bold tracking-wide">DEORAOJI ITANKAR PUBLIC SCHOOL</span>
+            <span className="leading-tight min-w-0">
+              <span className="block font-display font-semibold text-ink text-sm sm:text-base md:text-lg">DEORAOJI ITANKAR PUBLIC SCHOOL</span>
+              <span className="block text-[11px] text-meadow font-bold tracking-wide">DIPS Umred</span>
             </span>
           </Link>
 
